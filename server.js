@@ -1,8 +1,10 @@
 import  express  from "express";
 import  cors  from "cors";
 import { logger } from "logger-express";
-import jewelryRouter from "../MyPrecious/routes/jewelryRoutes.js";
+import jewelryRouter from "./routes/jewelryRoutes.js";
 import { notFound } from "./src/controllers/jewelryControllers.js";
+
+
 const app = express()
 const PORT = process.env.PORT || 3000
 
