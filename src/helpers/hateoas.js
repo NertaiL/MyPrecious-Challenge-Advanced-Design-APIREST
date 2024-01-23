@@ -3,7 +3,7 @@ const prepareHateoas = async (entity, data) => {
       .map((v) => {
         return {
           name: v.nombre,
-          href: `/${entity}/${v.id}`,
+          href: `/api/v1/${entity}/by/${v.id}`,
         };
       })
       .slice(0, 6);
