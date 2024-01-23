@@ -19,7 +19,7 @@ export const getJewelById = async (id) =>{
 
 export const orderLimitPage = async(order_by = "stock_ASC",limit = 10, page = 4) =>{
     const [attribute, direction] = order_by.split("_") 
-    const offset = page * limit;
+    const offset = (page -1) * limit;   //aqui lo dejo (page - 1) es para que la pagina 1 no sea la pagina 0, entonces le restamos uno y nos quedaria la pagina 1 como pagina 1 y no en la pag 0, entonces el offset 0 seria en la pag 1 y no en la pag 0.
     const formattedQuery = format( 
         "SELECT * FROM inventario ORDER BY %s %s LIMIT %s OFFSET %s",
         attribute, 

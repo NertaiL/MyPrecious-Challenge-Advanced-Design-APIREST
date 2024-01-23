@@ -5,7 +5,7 @@ const pagination = (data, items, page ) => {
   const itemsInt = Number(items);
 
 
-  const startIndex = (pageInt - 1) * itemsInt; 
+  const startIndex = (pageInt - 1) * itemsInt;  //el paginna -1 quiere decir que la pagina 1 nosera la pagina 0 sino que sera la pagina 1 como tal
   const endIndex = pageInt * itemsInt;
 
   // guardo el resultado en un objeto
